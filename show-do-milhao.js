@@ -5,78 +5,133 @@ const readline = require('readline');
 
 const perguntas = [
   {
-    pergunta: 'Qual é a capital do Brasil?',
-    alternativas: ['A) Rio de Janeiro', 'B) Brasília', 'C) São Paulo'],
+    pergunta: 'Em que estado brasileiro nasceu a apresentadora Xuxa?',
+    alternativas: ['A) Rio de Janeiro', 'B) Rio Grande do Sul', 'C) Santa Catarina', 'D) Goiás'],
     correta: 1
   },
   {
-    pergunta: 'Quem pintou a Mona Lisa?',
-    alternativas: ['A) Leonardo da Vinci', 'B) Pablo Picasso', 'C) Michelangelo'],
-    correta: 0
-  },
-  {
-    pergunta: 'Qual o maior planeta do sistema solar?',
-    alternativas: ['A) Terra', 'B) Júpiter', 'C) Saturno'],
+    pergunta: 'Qual é o nome dado ao estado da água em forma de gelo?',
+    alternativas: ['A) Líquido', 'B) Sólido', 'C) Gasoso', 'D) Vaporoso'],
     correta: 1
   },
   {
-    pergunta: 'Em que continente fica o Egito?',
-    alternativas: ['A) África', 'B) Ásia', 'C) Europa'],
-    correta: 0
-  },
-  {
-    pergunta: 'Qual é o elemento químico representado por O?',
-    alternativas: ['A) Ouro', 'B) Oxigênio', 'C) Prata'],
-    correta: 1
-  },
-  {
-    pergunta: 'Quem escreveu Dom Quixote?',
-    alternativas: ['A) William Shakespeare', 'B) Miguel de Cervantes', 'C) Machado de Assis'],
-    correta: 1
-  },
-  {
-    pergunta: 'Qual é o menor país do mundo?',
-    alternativas: ['A) Vaticano', 'B) Mônaco', 'C) San Marino'],
-    correta: 0
-  },
-  {
-    pergunta: 'Em que ano o homem pisou na Lua pela primeira vez?',
-    alternativas: ['A) 1969', 'B) 1972', 'C) 1959'],
-    correta: 0
-  },
-  {
-    pergunta: 'Qual é o animal símbolo da Austrália?',
-    alternativas: ['A) Canguru', 'B) Coala', 'C) Ornitorrinco'],
-    correta: 0
-  },
-  {
-    pergunta: 'Quem descobriu o Brasil?',
-    alternativas: ['A) Cristóvão Colombo', 'B) Pedro Álvares Cabral', 'C) Vasco da Gama'],
-    correta: 1
-  },
-  {
-    pergunta: 'Qual é o maior oceano do mundo?',
-    alternativas: ['A) Atlântico', 'B) Índico', 'C) Pacífico'],
+    pergunta: 'Qual era o apelido da cantora Elis Regina?',
+    alternativas: ['A) Gauchinha', 'B) Paulistinha', 'C) Pimentinha', 'D) Andorinha'],
     correta: 2
   },
   {
-    pergunta: 'Qual é o símbolo químico do ferro?',
-    alternativas: ['A) Fe', 'B) Ir', 'C) F'],
-    correta: 0
-  },
-  {
-    pergunta: 'Quem foi o primeiro presidente do Brasil?',
-    alternativas: ['A) Getúlio Vargas', 'B) Deodoro da Fonseca', 'C) Juscelino Kubitschek'],
+    pergunta: 'Quem é a namorada do Mickey?',
+    alternativas: ['A) Margarida', 'B) Minnie', 'C) A Pequena Sereia', 'D) Olívia Palito'],
     correta: 1
   },
   {
-    pergunta: 'Qual é a moeda oficial do Japão?',
-    alternativas: ['A) Yuan', 'B) Won', 'C) Iene'],
+    pergunta: 'Qual é o personagem do folclore brasileiro que tem uma perna só?',
+    alternativas: ['A) Cuca', 'B) Negrinho do Pastoreio', 'C) Boitatá', 'D) Saci-Pererê'],
+    correta: 3
+  },
+  {
+    pergunta: 'Fidel Castro nasceu em que país?',
+    alternativas: ['A) Jamaica', 'B) Cuba', 'C) El Salvador', 'D) México'],
+    correta: 1
+  },
+  {
+    pergunta: 'Quem proclamou a república no Brasil em 1889?',
+    alternativas: ['A) Duque de Caxias', 'B) Marechal Rondon', 'C) Dom Pedro II', 'D) Marechal Deodoro'],
+    correta: 3
+  },
+  {
+    pergunta: 'Quem é o patrono do exército brasileiro?',
+    alternativas: ['A) Marechal Deodoro', 'B) Barão de Mauá', 'C) Duque de Caxias', 'D) Marquês de Pombal'],
     correta: 2
   },
   {
-    pergunta: 'Qual é o maior país do mundo em extensão territorial?',
-    alternativas: ['A) Canadá', 'B) China', 'C) Rússia'],
+    pergunta: 'Quem era o apresentador que reprovava os calouros tocando uma buzina?',
+    alternativas: ['A) Raul Gil', 'B) Bolinha', 'C) Flávio Cavalcanti', 'D) Chacrinha'],
+    correta: 3
+  },
+  {
+    pergunta: 'O que era Frankenstein, de Mary Shelley?',
+    alternativas: ['A) Monstro', 'B) Gorila', 'C) Príncipe', 'D) Sapo'],
+    correta: 0
+  },
+  {
+    pergunta: 'Qual é o signo do zodíaco de quem nasce no dia do ano-novo?',
+    alternativas: ['A) Virgem', 'B) Aquário', 'C) Capricórnio', 'D) Áries'],
+    correta: 2
+  },
+  {
+    pergunta: 'Quem fundou a fábrica de automóveis Ford?',
+    alternativas: ['A) Harrison Ford', 'B) Gerald Ford', 'C) Henry Ford', 'D) Anna Ford'],
+    correta: 2
+  },
+  {
+    pergunta: 'Qual é a cor que se associa com os grupos ecológicos?',
+    alternativas: ['A) Preta', 'B) Vermelha', 'C) Azul', 'D) Verde'],
+    correta: 3
+  },
+  {
+    pergunta: 'A água ferve a quantos graus centígrados?',
+    alternativas: ['A) 200', 'B) 100', 'C) 170', 'D) 220'],
+    correta: 1
+  },
+  {
+    pergunta: 'Quando é comemorado o dia da independência do Brasil?',
+    alternativas: ['A) 21 de Abril', 'B) 12 de Outubro', 'C) 7 de Setembro', 'D) 25 de Dezembro'],
+    correta: 2
+  },
+  {
+    pergunta: 'Qual lugar é também chamado de Santa Sé?',
+    alternativas: ['A) Veneza', 'B) Vitória', 'C) Vancouver', 'D) Vaticano'],
+    correta: 3
+  },
+  {
+    pergunta: 'Quem tem por lema a frase: “Sempre alerta”?',
+    alternativas: ['A) Médicos', 'B) Escoteiros', 'C) Bombeiros', 'D) Policiais'],
+    correta: 1
+  },
+  {
+    pergunta: 'Quem foi o grande amor de Julieta?',
+    alternativas: ['A) Romeu', 'B) Orfeu', 'C) Hamlet', 'D) Iago'],
+    correta: 0
+  },
+  {
+    pergunta: 'Quantos signos formam o zodíaco?',
+    alternativas: ['A) Nove', 'B) Dez', 'C) Onze', 'D) Doze'],
+    correta: 3
+  },
+  {
+    pergunta: 'Vatapá é uma comida típica de qual estado?',
+    alternativas: ['A) Paraná', 'B) Santa Catarina', 'C) São Paulo', 'D) Bahia'],
+    correta: 3
+  },
+  {
+    pergunta: 'Como se chama o lugar onde são armazenadas as balas de um revólver?',
+    alternativas: ['A) Cano', 'B) Tambor', 'C) Agulha', 'D) Gatilho'],
+    correta: 1
+  },
+  {
+    pergunta: 'Qual personagem da turma da Mônica tem apenas cinco fios de cabelo?',
+    alternativas: ['A) Mônica', 'B) Cebolinha', 'C) Cascão', 'D) Magali'],
+    correta: 1
+  },
+  {
+    pergunta: 'Qual cantora tinha o apelido de “Ternurinha” na época da jovem guarda?',
+    alternativas: ['A) Silvinha', 'B) Wanderléia', 'C) Gretchen', 'D) Martinha'],
+    correta: 1
+  },
+  {
+    pergunta: 'O churrasco é considerado uma comida típica de qual estado?',
+    alternativas: ['A) Ceará', 'B) Rio Grande do Sul', 'C) Pará', 'D) Maranhão'],
+    correta: 1
+  },
+  {
+    pergunta: 'Qual cantor é o pai da dupla Sandy e Júnior?',
+    alternativas: ['A) Leonardo', 'B) Xororó', 'C) Zezé Di Camargo', 'D) Chitãozinho'],
+    correta: 1
+  },
+  {
+    pergunta: 'Quem foi o criador dos personagens Pedrinho, Narizinho e Emília?',
+    alternativas: ['A) Maurício de Sousa', 'B) Ziraldo', 'C) Monteiro Lobato', 'D) Machado de Assis'],
     correta: 2
   }
 ];

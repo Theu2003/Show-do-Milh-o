@@ -1,6 +1,6 @@
 # Show do Milhão
 
-## Nome completo
+## Nome
 Mateus Martins Peres
 
 ## Regras do Jogo
@@ -26,6 +26,7 @@ npm start
 ## Créditos - Fontes de referência utilizadas
 - [Node.js readline](https://nodejs.org/api/readline.html)
 - [Documentação oficial do Node.js](https://nodejs.org/en/docs)
+- [Perguntas e respostas do Show do Milhão](https://www.recantodasletras.com.br/trabalhosescolares/4134569)
 
 ## Licença do projeto
 MIT
