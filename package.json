@@ -1,0 +1,11 @@
+{
+  "name": "show-do-milhao",
+  "version": "1.0.0",
+  "description": "Jogo Show do Milhão no terminal usando Node.js",
+  "main": "show-do-milhao.js",
+  "scripts": {
+    "start": "node show-do-milhao.js"
+  },
+  "author": "",
+  "license": "MIT"
+}
